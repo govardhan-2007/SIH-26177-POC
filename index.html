@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIH 26177 | Adaptive Multi-UAV Search & Rescue</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav">
+  <a class="logo" href="#home">SIH <span>26177</span></a>
+  <div class="navlinks">
+    <a href="#problem">Problem</a>
+    <a href="#solution">Solution</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#demo">Live Demo</a>
+    <a href="#impact">Impact</a>
+  </div>
+  <a class="navbtn nav-live" href="#demo"><span>●</span> LIVE SIMULATOR ↗</a>
+</nav>
+
+<section id="home" class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">SMART INDIA HACKATHON 2026 · SIH26177</div>
+    <h1>Search smarter.<br><em>Rescue faster.</em></h1>
+    <p class="lead">An adaptive heterogeneous multi-UAV system for AI-powered search and rescue—where drones cooperate, share situational awareness, and dynamically take over tasks as conditions change.</p>
+    <div class="actions">
+      <a class="primary" href="simulator/index.html" target="_blank" rel="noopener">Open Live Simulation ↗</a>
+      <a class="secondary" href="#solution">Explore the Solution ↓</a>
+    </div>
+    <div class="stats">
+      <div><b>1O + 2I</b><span>Core UAV team</span></div>
+      <div><b>FULL MESH</b><span>Peer communication</span></div>
+      <div><b>ADAPTIVE</b><span>Dynamic task allocation</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="radar"><div class="sweep"></div><div class="dot d1"></div><div class="dot d2"></div><div class="dot d3"></div><div class="drone observer">O1</div><div class="drone i1">I1</div><div class="drone i2">I2</div><div class="relay">R1</div></div>
+    <div class="visual-label">LIVE MISSION NETWORK</div>
+  </div>
+</section>
+<section class="live-band" id="live">
+  <div class="live-band-copy">
+    <div class="live-badge"><span></span> LIVE INTERACTIVE PROTOTYPE</div>
+    <h2>See the UAV coordination system in action.</h2>
+    <p>Don't just read about the architecture — run the mission. Test adaptive task allocation, battery-aware reassignment, UAV failure, hazard priority and communication degradation directly in your browser.</p>
+    <a class="live-launch" href="#demo">Open Full Simulator ↓</a>
+  </div>
+  <div class="live-preview">
+    <div class="preview-top"><span>SIH 26177 / MISSION CONTROL</span><span>● SIMULATION READY</span></div>
+    <div class="preview-map">
+      <div class="mini-node n1">O1</div><div class="mini-node n2">I1</div><div class="mini-node n3">I2</div>
+      <div class="mini-relay">R1</div>
+      <div class="mini-line l1"></div><div class="mini-line l2"></div><div class="mini-line l3"></div>
+      <div class="mini-victim v1"></div><div class="mini-victim v2"></div><div class="mini-hazard h1">!</div>
+    </div>
+    <div class="preview-bottom">
+  <b>WORLD MODEL</b><span>ADAPTIVE TASK ALLOCATOR</span><span>UAV TEAM</span><span>LIVE FEEDBACK</span>
+  <a class="preview-fullscreen" href="simulator/index.html" target="_blank" rel="noopener">OPEN FULL SIMULATOR ↗</a>
+</div>
+  </div>
+</section>
+
+
+<section id="problem" class="section">
+  <div class="section-head"><div class="eyebrow">01 · THE PROBLEM</div><h2>Why should every drone<br>do everything?</h2></div>
+  <div class="problem-grid">
+    <article><span>01</span><h3>Disaster areas are dynamic</h3><p>Victims, hazards, connectivity and flight conditions can change during a mission.</p></article>
+    <article><span>02</span><h3>Single-drone dependency</h3><p>A single fully equipped UAV creates a bottleneck for coverage, endurance and mission continuity.</p></article>
+    <article><span>03</span><h3>Limited battery & connectivity</h3><p>Tasks need to move to the UAV that is better positioned and still has enough endurance.</p></article>
+  </div>
+</section>
+
+<section id="solution" class="section dark">
+  <div class="section-head"><div class="eyebrow">02 · PROPOSED SOLUTION</div><h2>Multiple drones.<br>One shared mission view.</h2><p>Instead of making one drone do everything, the system distributes responsibilities across Observer, Investigator and Relay capabilities while allowing task ownership to adapt.</p></div>
+  <div class="role-grid">
+    <div class="role observer-card"><div class="role-icon">O1</div><h3>Observer</h3><p>Wide-area monitoring and initial detection of people and hazards.</p><ul><li>Area coverage</li><li>Victim detection</li><li>Hazard alerts</li></ul></div>
+    <div class="role investigator-card"><div class="role-icon">I1/I2</div><h3>Investigators</h3><p>Receive coordinates and move closer for verification and task execution.</p><ul><li>Victim verification</li><li>Parallel investigation</li><li>Battery-aware return</li></ul></div>
+    <div class="role relay-card"><div class="role-icon">R1</div><h3>Relay / Comms</h3><p>Supports the shared mission picture and communication flow in the prototype.</p><ul><li>Mesh visualization</li><li>Status exchange</li><li>Low-bandwidth concept</li></ul></div>
+  </div>
+</section>
+
+<section id="architecture" class="section">
+  <div class="section-head"><div class="eyebrow">03 · SYSTEM ARCHITECTURE</div><h2>Perceive → Detect → Assign → Act<br>→ Investigate → Update → Repeat</h2></div>
+  <div class="flow">
+    <div><b>AI PERCEPTION</b><small>Detect people & hazards</small></div><i>→</i>
+    <div><b>WORLD MODEL</b><small>Maintain mission state</small></div><i>→</i>
+    <div class="accent"><b>TASK ALLOCATOR</b><small>Location · Battery · Risk · Priority</small></div><i>→</i>
+    <div><b>UAV EXECUTION</b><small>Search · Investigate · Relay</small></div><i>→</i>
+    <div><b>FEEDBACK</b><small>Update & repeat</small></div>
+  </div>
+  <div class="adaptive">
+    <div><div class="big">ADAPTIVE</div><p>Roles are not permanently fixed. If an investigator becomes unavailable or low on battery, unfinished work returns to the allocator for reassignment.</p></div>
+    <div class="decision"><span>LOCATION</span><span>BATTERY</span><span>CAPABILITY</span><span>RISK</span><span>PRIORITY</span></div>
+  </div>
+</section>
+
+<section id="demo" class="section demo-section">
+  <div class="section-head"><div class="eyebrow">04 · LIVE PROTOTYPE</div><div class="live-badge dark-badge"><span></span> INTERACTIVE DEMONSTRATION</div><h2>Run the mission in your browser.</h2><p>Use the scenarios to demonstrate normal search, low battery, UAV unavailability, hazard priority and degraded communication.</p></div>
+  <div class="demo-wrap">
+    <iframe src="simulator/index.html" title="SIH 26177 Live Multi-UAV Simulator"></iframe>
+  </div>
+  <div class="demo-actions"><a class="live-launch" href="simulator/index.html" target="_blank" rel="noopener">Open Simulator in Full Screen ↗</a></div><div class="demo-note">Prototype scope: the browser demo models the coordination and mission-management layer. Real YOLO/OpenCV/PyTorch/PX4/MAVLink integration belongs to the deployable UAV implementation.</div>
+</section>
+
+<section id="impact" class="section">
+  <div class="section-head"><div class="eyebrow">05 · IMPACT</div><h2>Designed for changing conditions.</h2></div>
+  <div class="impact-grid">
+    <div><b>01</b><h3>Faster victim discovery</h3><p>Multiple UAVs can search different parts of a disaster area instead of depending on a single drone.</p></div>
+    <div><b>02</b><h3>Better battery use</h3><p>Tasks can be assigned to the UAV that is better positioned and has sufficient remaining endurance.</p></div>
+    <div><b>03</b><h3>Limited-connectivity operation</h3><p>Important mission information can be exchanged through low-bandwidth communication concepts.</p></div>
+    <div><b>04</b><h3>Mission continuity</h3><p>If a UAV becomes unavailable, another available UAV can take over suitable unfinished tasks.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div><b>THE ANTI-REGRESSORS</b><span> · Smart India Hackathon 2026 · Problem Statement SIH26177</span></div>
+  <a href="#home">Back to top ↑</a>
+</footer>
+</body>
+</html>

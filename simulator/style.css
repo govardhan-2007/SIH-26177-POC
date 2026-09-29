@@ -1,0 +1,35 @@
+*{box-sizing:border-box}
+body{margin:0;background:#dfe5eb;color:#18222d;font-family:Arial,Helvetica,sans-serif}
+.topbar{height:58px;background:#101722;color:#fff;display:flex;align-items:center;padding:0 15px;gap:12px;min-width:1180px}
+.brand{color:#4db8ff;font-size:20px;font-weight:800}
+.title{font-size:13px;font-weight:800;letter-spacing:.4px}
+.live{margin-left:auto;color:#62df9b;font-size:9px;font-weight:800}
+.live span{display:inline-block;width:7px;height:7px;border-radius:50%;background:#37d383;margin-right:5px}
+.page{padding:10px;min-width:1180px}
+.main-grid{display:grid;grid-template-columns:900px 270px;gap:10px;justify-content:center}
+.visual-card{background:#cbd4dc;border:1px solid #9aa8b4;padding:6px;border-radius:5px}
+.canvas-title{height:38px;display:flex;align-items:center;justify-content:space-between;padding:0 8px;font-size:10px}
+.canvas-title small{display:block;color:#607181;font-weight:600;margin-top:2px}
+#scenarioBadge{background:#18334a;color:#7de7b2;padding:6px 8px;border-radius:4px;font-size:8px;font-weight:800}
+canvas{display:block;width:900px;height:570px;background:#111b26;border:2px solid #506070}
+.side{display:flex;flex-direction:column;gap:7px}
+.card{background:#dfe5eb;border:1px solid #a3afb9;border-radius:5px;padding:7px}
+.card h3{font-size:10px;margin:0 0 6px;letter-spacing:.35px}
+button,select{width:100%;margin:3px 0;padding:7px;border:1px solid #a5b0ba;border-radius:3px;background:#f6f8fa;font-weight:700;font-size:10px}
+button{cursor:pointer}
+button:hover{background:#e7edf2}
+select{cursor:pointer}
+pre{margin:0;white-space:pre-wrap;font:8px/1.38 Consolas,monospace}
+#metrics{font-size:8.5px}
+#allocator{font-size:8px;color:#213747}
+#nodes{font-size:8px}
+.log-card{min-height:180px;flex:1}
+#log{height:180px;overflow:auto;background:#0e151d;color:#d8e5ef;padding:5px}
+.architecture{margin:10px auto 0;max-width:1180px;background:#f3f6f8;border:1px solid #a6b1bb;border-radius:6px;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px}
+.arch-box{min-width:145px;min-height:48px;border:1px solid #8d9aa6;border-radius:5px;background:#fff;text-align:center;padding:8px 6px;box-shadow:0 1px 2px #0002}
+.arch-box b{display:block;font-size:9px}
+.arch-box span{display:block;font-size:7px;color:#627384;margin-top:4px}
+.command{border-top:4px solid #315f9c}.model{border-top:4px solid #2e9b70}.allocator{border-top:4px solid #d58a22}.uavs{border-top:4px solid #7554a8}.dashboard{border-top:4px solid #2878b7}
+.arrow{font-size:17px;color:#5f7180;font-weight:800}
+footer{height:28px;background:#101722;color:#d9e4ed;padding:7px 12px;font-size:8px;font-weight:700;margin-top:10px;min-width:1180px}
+@media(max-width:1180px){.page{overflow-x:auto}}

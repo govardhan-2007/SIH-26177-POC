@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIH 26177 | Adaptive Multi-UAV Search & Rescue</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">SIH 26177</div>
+  <div class="title">ADAPTIVE MULTI-UAV SEARCH &amp; RESCUE</div>
+  <div class="live"><span></span> SIMULATION ONLINE</div>
+</header>
+
+<main class="page">
+  <section class="main-grid">
+    <div class="visual-card">
+      <div class="canvas-title">
+        <div><b>LIVE DISASTER AREA</b><small>Perceive → Update → Allocate → Act</small></div>
+        <div id="scenarioBadge">NORMAL SEARCH</div>
+      </div>
+      <canvas id="simCanvas" width="900" height="570"></canvas>
+    </div>
+
+    <aside class="side">
+      <section class="card">
+        <h3>MISSION CONTROL</h3>
+        <button id="startBtn">▶ START / RESTART</button>
+        <button id="pauseBtn">Ⅱ PAUSE / RESUME</button>
+        <select id="scenario">
+          <option value="normal">Normal Search</option>
+          <option value="lowbattery">I1 Low Battery</option>
+          <option value="failure">I1 UAV Unavailable</option>
+          <option value="hazard">Hazard Priority</option>
+          <option value="comms">Communication Degraded</option>
+        </select>
+        <button id="applyScenario">APPLY SCENARIO</button>
+        <button id="messageBtn">SEND TEST MESH MESSAGE</button>
+      </section>
+
+      <section class="card">
+        <h3>MISSION / WORLD MODEL</h3>
+        <pre id="metrics"></pre>
+      </section>
+
+      <section class="card">
+        <h3>ADAPTIVE TASK ALLOCATOR</h3>
+        <pre id="allocator"></pre>
+      </section>
+
+      <section class="card">
+        <h3>UAV FLEET</h3>
+        <pre id="nodes"></pre>
+      </section>
+
+      <section class="card log-card">
+        <h3>AI / COMMS EVENT LOG</h3>
+        <pre id="log"></pre>
+      </section>
+    </aside>
+  </section>
+
+  <section class="architecture">
+    <div class="arch-box command"><b>COMMAND CENTER</b><span>Mission Control</span></div>
+    <div class="arrow">↓</div>
+    <div class="arch-box model"><b>WORLD MODEL</b><span>Environment &amp; State Data</span></div>
+    <div class="arrow">→</div>
+    <div class="arch-box allocator"><b>TASK ALLOCATOR</b><span>Location • Battery • Risk • Priority</span></div>
+    <div class="arrow">→</div>
+    <div class="arch-box uavs"><b>UAV TEAM</b><span>Observer • Investigators • Adaptive Roles</span></div>
+    <div class="arrow">↔</div>
+    <div class="arch-box dashboard"><b>LIVE DASHBOARD</b><span>Situation Updates &amp; Feedback</span></div>
+  </section>
+</main>
+
+<footer>SIH 26177 • Adaptive heterogeneous multi-UAV search &amp; rescue • Browser simulation prototype</footer>
+<script src="script.js"></script>
+</body>
+</html>
